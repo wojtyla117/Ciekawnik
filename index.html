@@ -1,94 +1,117 @@
-<!DOCTYPE <!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE html><html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ciekawnik</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciekawnik – Twoje codzienne zaskoczenie!</title>
   <style>
     body {
-      background: #000;
+      background-color: #000;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 20px;
     }
     h1 {
+      font-size: 48px;
       color: cyan;
-      font-size: 36px;
+      margin-bottom: 10px;
     }
     h2 {
-      font-size: 24px;
+      font-size: 28px;
+      color: #fff;
       margin-top: 40px;
     }
     .box {
       background: #111;
       border-radius: 12px;
       padding: 20px;
-      margin: 20px auto;
+      margin: 30px auto;
       width: 90%;
-      max-width: 600px;
-      box-shadow: 0 0 10px #0ff;
+      max-width: 800px;
+      box-shadow: 0 0 20px cyan;
     }
     a {
-      color: #00f8ff;
+      color: #0ff;
       text-decoration: none;
       display: block;
-      margin: 8px 0;
+      margin: 10px;
       font-weight: bold;
     }
     .licznik {
-      margin-top: 30px;
       font-style: italic;
-      color: #aaa;
+      color: #ccc;
+      margin-top: 40px;
+    }
+    button {
+      background: #222;
+      color: #0ff;
+      border: 2px solid #0ff;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0ff;
+      color: #000;
     }
   </style>
 </head>
 <body>
   <h1>Witaj na Ciekawniku!</h1>
-  <p>Strona pełna ciekawostek, porad i niespodzianek dla każdego — młodych, starszych, kobiet i mężczyzn!</p>
-
-  <div class="box">
+  <p>Twoja codzienna dawka fascynujących faktów, quizów, cytatów i okazji!</p>  <div class="box">
     <h2>🎯 Dzisiejsza ciekawostka:</h2>
     <p id="ciekawostka">Wczytywanie...</p>
-  </div>
-
-  <div class="box">
+  </div>  <div class="box">
     <h2>💬 Cytat dnia:</h2>
     <p id="cytat">Wczytywanie...</p>
-  </div>
-
-  <div class="box">
+  </div>  <div class="box">
+    <h2>🧠 Mini quiz:</h2>
+    <p id="pytanie">Wczytywanie pytania...</p>
+    <div id="odpowiedzi"></div>
+    <p id="rezultat"></p>
+  </div>  <div class="box">
     <h2>🔗 Polecane okazje:</h2>
     <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛍️ Super okazje na zakupy!</a>
     <a href="https://tmlead.pl/redirect/275171_985" target="_blank">🎰 Zagraj i wygraj!</a>
     <a href="https://tmlead.pl/redirect/275171_1134" target="_blank">🎯 Sprawdź hit dnia!</a>
-  </div>
-
-  <div class="licznik">
-    Odwiedzających: <span id="visits">...</span>
-  </div>
-
-  <script>
+  </div>  <p class="licznik">Odwiedzających: <span id="visits">...</span></p>  <script>
     // Ciekawostki
     const ciekawostki = [
       "Czy wiesz, że serce ośmiornicy ma trzy komory?",
       "Najdłuższy tunel świata to Gotthard Base Tunnel w Szwajcarii.",
-      "Banany są jagodami, ale truskawki już nie!",
-      "Pierwszy e-mail został wysłany w 1971 roku.",
-      "Ludzie i żyrafy mają tyle samo kręgów szyjnych.",
       "Niektóre rekiny potrafią świecić w ciemności.",
+      "Banany są jagodami, ale truskawki nie!",
+      "Pingwiny mają kolana — są schowane pod piórami."
     ];
-    document.getElementById("ciekawostka").innerText =
-      ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
+    document.getElementById("ciekawostka").innerText = ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
 
     // Cytaty
     const cytaty = [
       "Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.",
       "Rób to, co możesz, z tym, co masz, tam, gdzie jesteś.",
       "Sukces to suma małych wysiłków powtarzanych każdego dnia.",
-      "Działaj teraz – idealny moment nigdy nie nadejdzie.",
+      "Działaj teraz – idealny moment nigdy nie nadejdzie."
     ];
-    document.getElementById("cytat").innerText =
-      cytaty[Math.floor(Math.random() * cytaty.length)];
+    document.getElementById("cytat").innerText = cytaty[Math.floor(Math.random() * cytaty.length)];
+
+    // Quiz
+    const quiz = {
+      pytanie: "Który kontynent jest największy?",
+      odpowiedzi: ["Afryka", "Azja", "Ameryka Południowa"],
+      poprawna: 1
+    };
+    document.getElementById("pytanie").innerText = quiz.pytanie;
+    const odpowiedziDiv = document.getElementById("odpowiedzi");
+    quiz.odpowiedzi.forEach((odp, index) => {
+      const btn = document.createElement("button");
+      btn.innerText = odp;
+      btn.onclick = () => {
+        const wynik = index === quiz.poprawna ? "✅ Dobrze!" : "❌ Zła odpowiedź!";
+        document.getElementById("rezultat").innerText = wynik;
+      };
+      odpowiedziDiv.appendChild(btn);
+    });
 
     // Licznik odwiedzin
     const visitsElement = document.getElementById("visits");
@@ -97,6 +120,5 @@
       .then(data => {
         visitsElement.innerText = data.value;
       });
-  </script>
-</body>
+  </script></body>
 </html>
