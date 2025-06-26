@@ -1,8 +1,7 @@
 <!DOCTYPE html><html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ciekawnik – Twoje codzienne zaskoczenie!</title>
+  <meta charset="UTF-8" />
+  <title>Ciekawnik</title>
   <style>
     body {
       background-color: #000;
@@ -12,142 +11,94 @@
       padding: 20px;
     }
     h1 {
-      font-size: 48px;
       color: cyan;
-      margin-bottom: 10px;
+      font-size: 40px;
     }
     h2 {
-      font-size: 28px;
-      color: #fff;
-      margin-top: 40px;
+      font-size: 26px;
+      margin-top: 30px;
     }
     .box {
       background: #111;
       border-radius: 12px;
       padding: 20px;
-      margin: 30px auto;
-      width: 90%;
-      max-width: 800px;
-      box-shadow: 0 0 20px cyan;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 0 15px #0ff;
     }
     a {
-      color: #0ff;
+      color: #00ffff;
       text-decoration: none;
       display: block;
-      margin: 10px;
+      margin: 5px;
       font-weight: bold;
+    }
+    .cytat, .ciekawostka, .nowosc, .porada, .artykul {
+      margin-top: 20px;
     }
     .licznik {
       font-style: italic;
-      color: #ccc;
-      margin-top: 40px;
+      margin-top: 30px;
+      color: #00ffaa;
+      font-size: 20px;
     }
-    button {
-      background: #222;
-      color: #0ff;
-      border: 2px solid #0ff;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0ff;
-      color: #000;
-    }
-    .porada {
-      font-style: italic;
-      color: #90ee90;
-      margin-top: 15px;
-    }
-    .nowosc {
-      background: #222;
-      border-left: 4px solid #0ff;
-      padding: 15px;
-      margin-top: 20px;
+    .artykul-link {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #222;
+      padding: 10px;
       border-radius: 10px;
+      box-shadow: 0 0 10px #f0f;
     }
   </style>
 </head>
 <body>
   <h1>Witaj na Ciekawniku!</h1>
-  <p>Twoja codzienna dawka fascynujących faktów, quizów, cytatów i okazji!</p>  <div class="box">
+  <p>Strona pełna ciekawostek, porad i niespodzianek dla każdego — młodych, starszych, kobiet i mężczyzn!</p>  <div class="box ciekawostka">
     <h2>🎯 Dzisiejsza ciekawostka:</h2>
     <p id="ciekawostka">Wczytywanie...</p>
-  </div>  <div class="box">
+  </div>  <div class="box cytat">
     <h2>💬 Cytat dnia:</h2>
     <p id="cytat">Wczytywanie...</p>
-  </div>  <div class="box">
-    <h2>🧠 Mini quiz:</h2>
-    <p id="pytanie">Wczytywanie pytania...</p>
-    <div id="odpowiedzi"></div>
-    <p id="rezultat"></p>
-  </div>  <div class="box">
+  </div>  <div class="box porada">
     <h2>💡 Porada tygodnia:</h2>
-    <p class="porada" id="porada">Wczytywanie porady...</p>
-  </div>  <div class="box">
+    <p><i>Zadbaj o sen — 7-8 godzin snu to podstawa zdrowia.</i></p>
+  </div>  <div class="box nowosc">
     <h2>🔥 Nowość dnia:</h2>
-    <div class="nowosc" id="nowosc">Wczytywanie...</div>
+    <div class="artykul-link">
+      🎁 Konkurs z nagrodami – <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">weź udział już dziś!</a>
+    </div>
+  </div>  <div class="box artykul">
+    <h2>📰 Artykuł dnia:</h2>
+    <p>Nowe odkrycie naukowców: bakterie z kosmosu mogą wspierać zdrowie roślin! Czy to przyszłość rolnictwa?</p>
+    <a href="https://tmlead.pl/redirect/275171_1134" class="artykul-link" target="_blank">🔗 Przeczytaj więcej</a>
   </div>  <div class="box">
     <h2>🔗 Polecane okazje:</h2>
     <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛍️ Super okazje na zakupy!</a>
     <a href="https://tmlead.pl/redirect/275171_985" target="_blank">🎰 Zagraj i wygraj!</a>
     <a href="https://tmlead.pl/redirect/275171_1134" target="_blank">🎯 Sprawdź hit dnia!</a>
-  </div>  <p class="licznik">Odwiedzających: <span id="visits">...</span></p>  <script>
-    // Ciekawostki
+  </div>  <div class="licznik">
+    👁️‍🗨️ Odwiedzających: <span id="visits">...</span>
+  </div>  <script>
     const ciekawostki = [
       "Czy wiesz, że serce ośmiornicy ma trzy komory?",
       "Najdłuższy tunel świata to Gotthard Base Tunnel w Szwajcarii.",
+      "Banany są jagodami, ale truskawki już nie!",
+      "Pierwszy e-mail został wysłany w 1971 roku.",
+      "Ludzie i żyrafy mają tyle samo kręgów szyjnych.",
       "Niektóre rekiny potrafią świecić w ciemności.",
-      "Banany są jagodami, ale truskawki nie!",
-      "Pingwiny mają kolana — są schowane pod piórami."
     ];
-    document.getElementById("ciekawostka").innerText = ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
+    document.getElementById("ciekawostka").innerText =
+      ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
 
-    // Cytaty
     const cytaty = [
       "Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.",
       "Rób to, co możesz, z tym, co masz, tam, gdzie jesteś.",
       "Sukces to suma małych wysiłków powtarzanych każdego dnia.",
-      "Działaj teraz – idealny moment nigdy nie nadejdzie."
+      "Działaj teraz – idealny moment nigdy nie nadejdzie.",
     ];
-    document.getElementById("cytat").innerText = cytaty[Math.floor(Math.random() * cytaty.length)];
-
-    // Quiz
-    const quiz = {
-      pytanie: "Który kontynent jest największy?",
-      odpowiedzi: ["Afryka", "Azja", "Ameryka Południowa"],
-      poprawna: 1
-    };
-    document.getElementById("pytanie").innerText = quiz.pytanie;
-    const odpowiedziDiv = document.getElementById("odpowiedzi");
-    quiz.odpowiedzi.forEach((odp, index) => {
-      const btn = document.createElement("button");
-      btn.innerText = odp;
-      btn.onclick = () => {
-        const wynik = index === quiz.poprawna ? "✅ Dobrze!" : "❌ Zła odpowiedź!";
-        document.getElementById("rezultat").innerText = wynik;
-      };
-      odpowiedziDiv.appendChild(btn);
-    });
-
-    // Porady tygodnia
-    const porady = [
-      "Zrób dziś coś tylko dla siebie — relaks to nie luksus, to potrzeba.",
-      "Zadbaj o sen — 7-8 godzin snu to podstawa zdrowia.",
-      "Pij więcej wody, Twój organizm Ci za to podziękuje.",
-      "Nie porównuj się z innymi. Skup się na swoim rozwoju."
-    ];
-    document.getElementById("porada").innerText = porady[Math.floor(Math.random() * porady.length)];
-
-    // Nowość dnia
-    const nowosci = [
-      "🧴 Nowa seria kosmetyków naturalnych – sprawdź ofertę tygodnia!",
-      "📱 Testuj darmowe aplikacje i odbierz bonusy!",
-      "🎧 Muzyka relaksacyjna online – popraw sobie dzień!",
-      "🎁 Konkurs z nagrodami – weź udział już dziś!"
-    ];
-    document.getElementById("nowosc").innerText = nowosci[Math.floor(Math.random() * nowosci.length)];
+    document.getElementById("cytat").innerText =
+      cytaty[Math.floor(Math.random() * cytaty.length)];
 
     // Licznik odwiedzin
     const visitsElement = document.getElementById("visits");
