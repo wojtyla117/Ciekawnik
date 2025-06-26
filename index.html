@@ -55,6 +55,18 @@
       background: #0ff;
       color: #000;
     }
+    .porada {
+      font-style: italic;
+      color: #90ee90;
+      margin-top: 15px;
+    }
+    .nowosc {
+      background: #222;
+      border-left: 4px solid #0ff;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +82,12 @@
     <p id="pytanie">Wczytywanie pytania...</p>
     <div id="odpowiedzi"></div>
     <p id="rezultat"></p>
+  </div>  <div class="box">
+    <h2>💡 Porada tygodnia:</h2>
+    <p class="porada" id="porada">Wczytywanie porady...</p>
+  </div>  <div class="box">
+    <h2>🔥 Nowość dnia:</h2>
+    <div class="nowosc" id="nowosc">Wczytywanie...</div>
   </div>  <div class="box">
     <h2>🔗 Polecane okazje:</h2>
     <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛍️ Super okazje na zakupy!</a>
@@ -112,6 +130,24 @@
       };
       odpowiedziDiv.appendChild(btn);
     });
+
+    // Porady tygodnia
+    const porady = [
+      "Zrób dziś coś tylko dla siebie — relaks to nie luksus, to potrzeba.",
+      "Zadbaj o sen — 7-8 godzin snu to podstawa zdrowia.",
+      "Pij więcej wody, Twój organizm Ci za to podziękuje.",
+      "Nie porównuj się z innymi. Skup się na swoim rozwoju."
+    ];
+    document.getElementById("porada").innerText = porady[Math.floor(Math.random() * porady.length)];
+
+    // Nowość dnia
+    const nowosci = [
+      "🧴 Nowa seria kosmetyków naturalnych – sprawdź ofertę tygodnia!",
+      "📱 Testuj darmowe aplikacje i odbierz bonusy!",
+      "🎧 Muzyka relaksacyjna online – popraw sobie dzień!",
+      "🎁 Konkurs z nagrodami – weź udział już dziś!"
+    ];
+    document.getElementById("nowosc").innerText = nowosci[Math.floor(Math.random() * nowosci.length)];
 
     // Licznik odwiedzin
     const visitsElement = document.getElementById("visits");
