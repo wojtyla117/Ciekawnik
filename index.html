@@ -1,12 +1,87 @@
-
-<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE html><html lang="pl">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ciekawnik</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #00ffe1;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      text-align: center;
+    }
+    .ciekawostki {
+      margin: 2rem 0;
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffe1;
+    }
+    .afiliacja {
+      margin-top: 2rem;
+      background: #181818;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+    }
+    .afiliacja a {
+      display: block;
+      color: #00ffe1;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+    .licznik {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
   <h1>Witaj na Ciekawniku!</h1>
-  <p>Strona pełna ciekawostek, porad i niespodzianek dla każdego!</p>
-</body>
+  <p>Strona pełna ciekawostek, porad i niespodzianek dla każdego — młodych, starszych, kobiet i mężczyzn!</p>  <div class="ciekawostki">
+    <h2>🎯 Dzisiejsza ciekawostka:</h2>
+    <p id="ciekawostka">Wczytywanie...</p>
+  </div>  <div class="afiliacja">
+    <h2>🔗 Polecane okazje:</h2>
+    <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛒 Super okazje na zakupy!</a>
+    <a href="https://tmlead.pl/redirect/275171_985" target="_blank">🎰 Zagraj i wygraj!</a>
+    <a href="https://tmlead.pl/redirect/275171_1134" target="_blank">💰 Sprawdź sposób na dorobienie!</a>
+  </div>  <div class="licznik">
+    Odwiedzających: <span id="visits">...</span>
+  </div>  <script>
+    // Ciekawostki
+    const ciekawostki = [
+      "Czy wiesz, że serce ośmiornicy ma trzy komory?",
+      "Najdłuższy tunel świata to Gotthard Base Tunnel w Szwajcarii — 57 km!",
+      "Banany są jagodami, ale truskawki już nie!",
+      "Pierwszy e-mail został wysłany w 1971 roku.",
+      "Ludzie i żyrafy mają tyle samo kręgów szyjnych."
+    ];
+    document.getElementById("ciekawostka").innerText =
+      ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
+
+    // Licznik odwiedzin
+    const visitsElement = document.getElementById("visits");
+    fetch("https://api.countapi.xyz/hit/ciekawnik/visits")
+      .then(res => res.json())
+      .then(data => {
+        visitsElement.innerText = data.value;
+      });
+  </script></body>
 </html>
