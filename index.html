@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE html><html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ciekawnik – Twoja codzienna porcja ciekawostek!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciekawnik 2.0 – Twoja codzienna porcja inspiracji</title>
   <style>
     body {
       background: #000;
@@ -11,139 +10,102 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 20px;
-      text-align: center;
     }
     h1 {
-      font-size: 36px;
+      font-size: 32px;
       color: cyan;
-      margin-bottom: 10px;
+      text-align: center;
     }
-    p {
-      font-size: 18px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
-    .box {
+    .column {
+      flex: 1 1 300px;
+      max-width: 500px;
       background: #111;
-      border-radius: 12px;
       padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 0 20px #00ffff44;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #0ff4;
     }
     .title {
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 10px;
     }
-    .highlight {
-      color: #00ffff;
-      font-weight: bold;
-    }
-    .affiliate-link {
-      color: #0ff;
-      text-decoration: none;
-      display: block;
-      margin: 5px 0;
-    }
-    .affiliate-link:hover {
-      text-decoration: underline;
-    }
-    .img-box img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 10px;
-    }
     .button-link {
-      background: #cc00ff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
       display: inline-block;
-      margin-top: 10px;
+      background: #c0f;
+      color: white;
       text-decoration: none;
-      box-shadow: 0 0 10px #cc00ff77;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px #c0f;
     }
     .button-link:hover {
-      background: #9900cc;
+      background: #e0f;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 10px 0;
     }
     .visits {
-      margin-top: 20px;
+      text-align: center;
+      margin-top: 30px;
       font-style: italic;
-      color: #0f0;
-      font-size: 18px;
+      color: lime;
     }
   </style>
 </head>
 <body>
+  <h1>✨ Ciekawnik 2.0 ✨</h1>
+  <div class="container"><div class="column">
+  <div class="title">🔥 Nowość dnia:</div>
+  <img src="https://source.unsplash.com/featured/?gift" alt="Konkurs">
+  <p><strong>🎁 Konkurs z nagrodami</strong> – weź udział już dziś i zgarnij atrakcyjne nagrody!</p>
+  <a class="button-link" href="https://tmlead.pl/redirect/275171_985" target="_blank">Zgarnij nagrody</a>
+</div>
 
-  <h1>Witaj na Ciekawniku!</h1>
-  <p>Twoja codzienna porcja ciekawostek, inspiracji i okazji dla każdego – młodych, starszych, kobiet i mężczyzn!</p>
+<div class="column">
+  <div class="title">📃 Artykuł dnia:</div>
+  <img src="https://source.unsplash.com/featured/?space,science" alt="Kosmiczne bakterie">
+  <p><strong>Nowe odkrycie naukowców:</strong> bakterie z kosmosu mogą wspierać zdrowie roślin! Czy to przyszłość rolnictwa?</p>
+  <a class="button-link" href="https://tmlead.pl/redirect/275171_2402" target="_blank">Przeczytaj więcej</a>
+</div>
 
-  <div class="box">
-    <div class="title">🎯 Dzisiejsza ciekawostka:</div>
-    <p id="ciekawostka">Wczytywanie...</p>
-  </div>
+<div class="column">
+  <div class="title">🛍️ Polecane okazje:</div>
+  <img src="https://source.unsplash.com/featured/?shopping" alt="Zakupy">
+  <ul>
+    <li><a class="button-link" href="https://tmlead.pl/redirect/275171_1134" target="_blank">🍭 Super okazje na zakupy</a></li>
+    <li><a class="button-link" href="https://tmlead.pl/redirect/275171_2402" target="_blank">🎰 Zagraj i wygraj!</a></li>
+    <li><a class="button-link" href="https://tmlead.pl/redirect/275171_985" target="_blank">🎯 Sprawdź hit dnia!</a></li>
+  </ul>
+</div>
 
-  <div class="box">
-    <div class="title">💬 Cytat dnia:</div>
-    <p id="cytat">Wczytywanie...</p>
-  </div>
+<div class="column">
+  <div class="title">💬 Cytat dnia:</div>
+  <img src="https://source.unsplash.com/featured/?inspiration" alt="Cytat">
+  <p><em>„Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.”</em></p>
+</div>
 
-  <div class="box">
-    <div class="title">💡 Porada tygodnia:</div>
-    <p><em>Zadbaj o sen — 7–8 godzin snu to podstawa zdrowia.</em></p>
-  </div>
+<div class="column">
+  <div class="title">💡 Porada tygodnia:</div>
+  <img src="https://source.unsplash.com/featured/?health,wellness" alt="Zdrowie">
+  <p><strong>Zadbaj o sen</strong> – 7-8 godzin snu to podstawa zdrowia. Twój organizm Ci podziękuje.</p>
+</div>
 
-  <div class="box">
-    <div class="title">🔥 Nowość dnia:</div>
-    <p>🎁 <strong>Konkurs z nagrodami –</strong> weź udział już dziś!</p>
-    <a href="https://tmlead.pl/redirect/275171_1134" target="_blank" class="button-link">Zgarnij nagrody</a>
-  </div>
+<div class="column">
+  <div class="title">🌟 Ciekawostka dnia:</div>
+  <img src="https://source.unsplash.com/featured/?octopus" alt="Ciekawostka">
+  <p>Czy wiesz, że serce ośmiornicy ma aż trzy komory?</p>
+</div>
 
-  <div class="box img-box">
-    <div class="title">📰 Artykuł dnia:</div>
-    <p><strong>Nowe odkrycie naukowców:</strong> bakterie z kosmosu mogą wspierać zdrowie roślin! Czy to przyszłość rolnictwa?</p>
-    <img src="https://cdn.pixabay.com/photo/2016/03/27/22/16/bacteria-1280735_960_720.jpg" alt="Bakterie z kosmosu">
-    <a href="https://tmlead.pl/redirect/275171_985" target="_blank" class="button-link">Przeczytaj więcej</a>
-  </div>
-
-  <div class="box">
-    <div class="title">🔗 Polecane okazje:</div>
-    <a class="affiliate-link" href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛍️ Super okazje na zakupy!</a>
-    <a class="affiliate-link" href="https://tmlead.pl/redirect/275171_985" target="_blank">🎰 Zagraj i wygraj!</a>
-    <a class="affiliate-link" href="https://tmlead.pl/redirect/275171_1134" target="_blank">🎯 Sprawdź hit dnia!</a>
-  </div>
-
-  <div class="visits">👁️💬 <span id="visits">Odwiedzających: ...</span></div>
-
-  <script>
-    // Ciekawostki
-    const ciekawostki = [
-      "Czy wiesz, że serce ośmiornicy ma trzy komory?",
-      "Najdłuższy tunel świata to Gotthard Base Tunnel w Szwajcarii.",
-      "Niektóre rekiny potrafią świecić w ciemności.",
-      "Żyrafy i ludzie mają tyle samo kręgów szyjnych.",
-      "Pierwszy e-mail został wysłany w 1971 roku.",
-    ];
-    document.getElementById("ciekawostka").innerText =
-      ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
-
-    // Cytaty
-    const cytaty = [
-      "Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.",
-      "Działaj teraz – idealny moment nigdy nie nadejdzie.",
-      "Sukces to suma małych wysiłków powtarzanych każdego dnia.",
-      "Nie czekaj – działaj!",
-    ];
-    document.getElementById("cytat").innerText =
-      cytaty[Math.floor(Math.random() * cytaty.length)];
-
-    // Licznik odwiedzin
-    const visitsEl = document.getElementById("visits");
-    fetch("https://api.countapi.xyz/hit/ciekawnik/visits")
-      .then(res => res.json())
-      .then(data => {
-        visitsEl.innerHTML = `<strong style="color:#0ff;">${data.value}</strong>`;
-      });
-  </script>
-</body>
+  </div>  <div class="visits">
+    👁️💬 <strong>Odwiedzających:</strong> <span id="counter">1234+</span>
+  </div></body>
 </html>
