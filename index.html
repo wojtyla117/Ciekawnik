@@ -1,80 +1,94 @@
-<!DOCTYPE html><html lang="pl">
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ciekawnik</title>
   <style>
     body {
-      margin: 0;
+      background: #000;
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #f2f2f2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
+      text-align: center;
+      padding: 20px;
     }
     h1 {
-      color: #00ffe1;
-      font-size: 2.5rem;
+      color: cyan;
+      font-size: 36px;
     }
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      text-align: center;
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
     }
-    .ciekawostki {
-      margin: 2rem 0;
-      background: #1e1e1e;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ffe1;
-    }
-    .afiliacja {
-      margin-top: 2rem;
-      background: #181818;
-      padding: 1rem;
-      border-radius: 10px;
-      width: 100%;
+    .box {
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
       max-width: 600px;
+      box-shadow: 0 0 10px #0ff;
     }
-    .afiliacja a {
-      display: block;
-      color: #00ffe1;
+    a {
+      color: #00f8ff;
       text-decoration: none;
-      margin: 0.5rem 0;
+      display: block;
+      margin: 8px 0;
       font-weight: bold;
     }
     .licznik {
-      margin-top: 2rem;
-      font-size: 0.9rem;
+      margin-top: 30px;
+      font-style: italic;
       color: #aaa;
     }
   </style>
 </head>
 <body>
   <h1>Witaj na Ciekawniku!</h1>
-  <p>Strona pełna ciekawostek, porad i niespodzianek dla każdego — młodych, starszych, kobiet i mężczyzn!</p>  <div class="ciekawostki">
+  <p>Strona pełna ciekawostek, porad i niespodzianek dla każdego — młodych, starszych, kobiet i mężczyzn!</p>
+
+  <div class="box">
     <h2>🎯 Dzisiejsza ciekawostka:</h2>
     <p id="ciekawostka">Wczytywanie...</p>
-  </div>  <div class="afiliacja">
+  </div>
+
+  <div class="box">
+    <h2>💬 Cytat dnia:</h2>
+    <p id="cytat">Wczytywanie...</p>
+  </div>
+
+  <div class="box">
     <h2>🔗 Polecane okazje:</h2>
-    <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛒 Super okazje na zakupy!</a>
+    <a href="https://tmlead.pl/redirect/275171_2402" target="_blank">🛍️ Super okazje na zakupy!</a>
     <a href="https://tmlead.pl/redirect/275171_985" target="_blank">🎰 Zagraj i wygraj!</a>
-    <a href="https://tmlead.pl/redirect/275171_1134" target="_blank">💰 Sprawdź sposób na dorobienie!</a>
-  </div>  <div class="licznik">
+    <a href="https://tmlead.pl/redirect/275171_1134" target="_blank">🎯 Sprawdź hit dnia!</a>
+  </div>
+
+  <div class="licznik">
     Odwiedzających: <span id="visits">...</span>
-  </div>  <script>
+  </div>
+
+  <script>
     // Ciekawostki
     const ciekawostki = [
       "Czy wiesz, że serce ośmiornicy ma trzy komory?",
-      "Najdłuższy tunel świata to Gotthard Base Tunnel w Szwajcarii — 57 km!",
+      "Najdłuższy tunel świata to Gotthard Base Tunnel w Szwajcarii.",
       "Banany są jagodami, ale truskawki już nie!",
       "Pierwszy e-mail został wysłany w 1971 roku.",
-      "Ludzie i żyrafy mają tyle samo kręgów szyjnych."
+      "Ludzie i żyrafy mają tyle samo kręgów szyjnych.",
+      "Niektóre rekiny potrafią świecić w ciemności.",
     ];
     document.getElementById("ciekawostka").innerText =
       ciekawostki[Math.floor(Math.random() * ciekawostki.length)];
+
+    // Cytaty
+    const cytaty = [
+      "Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.",
+      "Rób to, co możesz, z tym, co masz, tam, gdzie jesteś.",
+      "Sukces to suma małych wysiłków powtarzanych każdego dnia.",
+      "Działaj teraz – idealny moment nigdy nie nadejdzie.",
+    ];
+    document.getElementById("cytat").innerText =
+      cytaty[Math.floor(Math.random() * cytaty.length)];
 
     // Licznik odwiedzin
     const visitsElement = document.getElementById("visits");
@@ -83,5 +97,6 @@
       .then(data => {
         visitsElement.innerText = data.value;
       });
-  </script></body>
+  </script>
+</body>
 </html>
