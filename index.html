@@ -1,129 +1,103 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE html><html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>✨ Ciekawnik 2.0 ✨</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciekawnik 2.0 – Twoja codzienna porcja ciekawostek</title>
   <style>
     body {
-      background-color: #000;
+      background: #000;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 20px;
+    }
+    h1, h2 {
       text-align: center;
+      color: #00ffff;
     }
-    h1 {
-      font-size: 36px;
-      color: cyan;
-    }
-    .box {
+    .sekcja {
       background: #111;
-      border-radius: 12px;
       padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 0 20px #00fff444;
-    }
-    .title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    .img-box img {
-      max-width: 100%;
       border-radius: 12px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 0 10px #0ff4;
+    }
+    .sekcja img {
+      max-width: 100%;
+      border-radius: 10px;
       margin: 10px 0;
     }
-    .highlight {
-      color: #00ffff;
-      font-weight: bold;
-    }
-    .affiliate-link {
-      color: #0ff;
-      text-decoration: none;
-      display: block;
-      margin-top: 10px;
-    }
-    .affiliate-link:hover {
-      text-decoration: underline;
-    }
-    .button-link {
-      background: #cc00ff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
+    .btn {
       display: inline-block;
+      background: #007744;
+      color: white;
+      padding: 10px 18px;
       margin-top: 10px;
       text-decoration: none;
-      box-shadow: 0 0 10px #cc00ff77;
+      border-radius: 8px;
     }
-    .button-link:hover {
-      background: #9900cc;
+    .btn:hover {
+      background: #00aa66;
     }
-    .visits {
-      margin-top: 20px;
-      font-style: italic;
+    .link-afiliacyjny {
+      display: inline-block;
+      margin-top: 15px;
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
       color: #0f0;
-      font-size: 18px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
-  <h1>✨ Ciekawnik 2.0 ✨</h1>
-
-  <div class="box">
-    <div class="title">🔥 Nowość dnia:</div>
-    <div class="img-box">
-      <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/present-849806_1280.jpg" alt="Konkurs z nagrodami">
-    </div>
+  <h1>✨ Ciekawnik 2.0 ✨</h1>  <div class="sekcja">
+    <h2>🔥 Nowość dnia:</h2>
+    <img src="https://source.unsplash.com/700x300/?prize,contest" alt="Konkurs">
     <p>🎁 <strong>Konkurs z nagrodami</strong> – weź udział już dziś i zgarnij atrakcyjne nagrody!</p>
-    <a class="button-link" href="https://tmlead.pl/redirect/275171_2402" target="_blank">Zgarnij nagrody</a>
-  </div>
-
-  <div class="box">
-    <div class="title">📰 Artykuł dnia:</div>
-    <div class="img-box">
-      <img src="https://cdn.pixabay.com/photo/2020/10/20/06/48/bacteria-5670076_1280.jpg" alt="Bakterie z kosmosu">
+    <a class="btn" href="https://tmlead.pl/redirect/275171_2402" target="_blank">Zgarnij nagrody</a>
+  </div>  <div class="sekcja">
+    <h2>🧠 Artykuł dnia: Kosmiczne bakterie</h2>
+    <img src="https://source.unsplash.com/700x300/?space,bacteria" alt="Kosmiczne bakterie">
+    <p>Naukowcy NASA odkryli bakterie, które potrafią przetrwać w próżni kosmicznej. To odkrycie może zrewolucjonizować rolnictwo i życie poza Ziemią. Badania wskazują, że mikroorganizmy mogą wspierać wzrost roślin w ekstremalnych warunkach. Fascynujące, prawda?</p>
+    <a class="btn" href="#kosmiczne-bakterie">Czytaj więcej</a>
+  </div>  <div id="kosmiczne-bakterie" class="sekcja">
+    <h2>🔬 Więcej o kosmicznych bakteriach</h2>
+    <p>Bakterie wyizolowane przez NASA wykazały zdolność do przeżycia i funkcjonowania w warunkach mikrograwitacji i promieniowania. Dzięki nim możliwe może być tworzenie upraw na Marsie lub Księżycu. Przyszłość rolnictwa w kosmosie może być bliższa niż nam się wydaje!</p>
+    <div class="link-afiliacyjny">
+      🌱 <a href="https://tmlead.pl/redirect/275171_1134" target="_blank">Zobacz, jak to może działać – nowoczesne technologie rolnicze</a>
     </div>
-    <p><span class="highlight">Nowe odkrycie naukowców:</span> bakterie z kosmosu mogą wspierać zdrowie roślin! Czy to przyszłość rolnictwa?</p>
-    <a class="button-link" href="https://tmlead.pl/redirect/275171_1134" target="_blank">Przeczytaj więcej</a>
-  </div>
-
-  <div class="box">
-    <div class="title">🛍️ Polecane okazje:</div>
-    <p>🌟 Znaleźliśmy coś ciekawego – możesz na tym zyskać:</p>
-    <a class="affiliate-link" href="https://tmlead.pl/redirect/275171_985" target="_blank">🛒 Super okazje na zakupy</a>
-    <a class="affiliate-link" href="https://tmlead.pl/redirect/275171_1134" target="_blank">🎰 Zagraj i wygraj</a>
-    <a class="affiliate-link" href="https://tmlead.pl/redirect/275171_2402" target="_blank">🎯 Sprawdź hit dnia</a>
-  </div>
-
-  <div class="box">
-    <div class="title">💬 Cytat dnia:</div>
-    <div class="img-box">
-      <img src="https://cdn.pixabay.com/photo/2015/03/26/09/41/quote-690385_1280.jpg" alt="Cytat motywacyjny">
+  </div>  <div class="sekcja">
+    <h2>🍽️ Smaczne i szybkie: Pasta z awokado</h2>
+    <img src="https://source.unsplash.com/700x300/?avocado,toast" alt="Pasta z awokado">
+    <p>Potrzebujesz tylko awokado, czosnek, cytrynę i sól. Rozgnieć wszystko, dodaj odrobinę oliwy i gotowe! Świetna na kanapki, do tortilli lub jako dip. Zdrowo i pysznie!</p>
+    <a class="btn" href="#pasta-awokado">Zobacz przepis</a>
+  </div>  <div id="pasta-awokado" class="sekcja">
+    <h2>🥑 Przepis na pastę z awokado</h2>
+    <ul>
+      <li>1 dojrzałe awokado</li>
+      <li>1 ząbek czosnku</li>
+      <li>sok z 1/2 cytryny</li>
+      <li>szczypta soli i pieprzu</li>
+    </ul>
+    <p>Wszystko rozgnieć widelcem na gładką pastę. Podawaj ze świeżym pieczywem lub krakersami. Pyszne i szybkie!</p>
+    <div class="link-afiliacyjny">
+      🍴 <a href="https://tmlead.pl/redirect/275171_985" target="_blank">Zobacz sprzęt kuchenny, który się przyda</a>
     </div>
-    <p><em>„Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.”</em></p>
-  </div>
-
-  <div class="box">
-    <div class="title">💡 Porada tygodnia:</div>
-    <div class="img-box">
-      <img src="https://cdn.pixabay.com/photo/2017/02/01/22/02/alarm-clock-2037381_1280.jpg" alt="Zdrowy sen">
-    </div>
-    <p><strong>Zadbaj o sen</strong> – 7–8 godzin snu to podstawa zdrowia. Twój organizm Ci podziękuje.</p>
-  </div>
-
-  <div class="box">
-    <div class="title">🌟 Ciekawostka dnia:</div>
-    <div class="img-box">
-      <img src="https://cdn.pixabay.com/photo/2021/09/01/12/53/octopus-6588771_1280.jpg" alt="Ośmiornica">
-    </div>
-    <p>Czy wiesz, że serce ośmiornicy ma aż trzy komory?</p>
-  </div>
-
-  <div class="visits">👁️💬 <strong>Odwiedzających:</strong> 1234+</div>
-
+  </div>  <div class="sekcja">
+    <h2>💬 Cytat dnia:</h2>
+    <img src="https://source.unsplash.com/700x200/?quote,inspiration" alt="Cytat">
+    <blockquote><em>„Nigdy nie rezygnuj z celu tylko dlatego, że osiągnięcie go wymaga czasu. Czas i tak upłynie.”</em></blockquote>
+  </div>  <div class="sekcja">
+    <h2>💡 Porada tygodnia:</h2>
+    <p><strong>Zadbaj o sen</strong> – 7-8 godzin snu to podstawa zdrowia. Twój organizm Ci podziękuje.</p>
+  </div>  <div class="sekcja">
+    <h2>😂 Humor dnia:</h2>
+    <p>Dlaczego komputerowi trudno się zakochać? Bo boi się złamać hasło!</p>
+  </div>  <div class="sekcja">
+    <h2>🎥 Wideo dnia:</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Wideo dnia" frameborder="0" allowfullscreen></iframe>
+  </div>  <p style="text-align:center; color: #0f0; margin-top:40px;">👁️💬 <strong>Odwiedzających:</strong> 1234+</p>
 </body>
 </html>
