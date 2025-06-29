@@ -1,103 +1,218 @@
-<!DOCTYPE html><html lang="pl">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ciekawnik 2.0 – Twoja codzienna porcja inspiracji</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ciekawnik</title>
   <style>
     body {
-      background: #000000;
-      color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #004080;
+      color: white;
       padding: 20px;
       text-align: center;
     }
     h1 {
-      font-size: 36px;
-      color: #00ffff;
-      margin-bottom: 10px;
+      margin: 0;
     }
-    h2 {
-      font-size: 28px;
-      color: #00ffcc;
-      margin-top: 40px;
+    nav {
+      background: #e0e0e0;
+      padding: 10px;
+      text-align: center;
     }
-    p, ul {
-      font-size: 18px;
-    }
-    .box {
-      background: #111111;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 0 20px #00ffff44;
-    }
-    .highlight {
-      color: #00ffff;
+    nav a {
+      margin: 0 10px;
+      color: #004080;
+      text-decoration: none;
       font-weight: bold;
     }
-    .button-link {
-      background: #007744;
-      color: #ffffff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 15px;
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+    .card-content p {
+      font-size: 0.95em;
+    }
+    .read-more {
       display: inline-block;
       margin-top: 10px;
-      box-shadow: 0 0 10px #00ffbb77;
+      padding: 8px 12px;
+      background: #004080;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9em;
     }
-    .button-link:hover {
-      background: #00aa66;
-    }
-    .section-title {
-      font-size: 24px;
-      font-weight: bold;
-      color: #33ffcc;
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 15px;
       margin-top: 30px;
     }
-    .affiliate-section {
-      background: #1a1a1a;
-      margin-top: 40px;
+    section {
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #0ff3;
+    }
+    .finance-links a {
+      display: block;
+      background: #fff;
+      margin: 10px auto;
+      padding: 10px 15px;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>✨ Ciekawnik 2.0 ✨</h1>  <div class="box">
-    <h2>🧠 Artykuł dnia: Kosmiczne bakterie</h2>
-    <p><strong>Nowe odkrycie naukowców:</strong> bakterie z kosmosu mogą wspierać zdrowie roślin! Czy to przyszłość rolnictwa?</p>
-    <a href="#bakterie" class="button-link">Czytaj dalej</a>
-  </div>  <div class="box">
-    <h2>🥑 Smaczne i szybkie: Pasta z awokado</h2>
-    <p>Potrzebujesz tylko awokado, czosnek, cytrynę i sól. Rozgnieć wszystko, dodaj odrobinę oliwy i gotowe!</p>
-    <a href="#pasta" class="button-link">Zobacz przepis</a>
-  </div>  <div class="box">
-    <h2>😂 Humor dnia</h2>
-    <p>Dlaczego komputerowi trudno się zakochać? Bo boi się złamać hasło!</p>
-  </div>  <div class="box">
-    <h2>🎥 Wideo dnia</h2>
-    <p>👉 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="button-link">Zobacz inspirujące wideo</a></p>
-  </div>  <div class="affiliate-section" id="bakterie">
-    <h2 class="section-title">🌱 Kosmiczne bakterie: jak mogą pomóc?</h2>
-    <p>Bakterie wyizolowane przez NASA wykazały zdolność do przeżycia w mikrograwitacji i promieniowaniu. Dzięki nim możliwe może być tworzenie upraw na Marsie lub Księżycu.</p>
-    <p>Przyszłość rolnictwa w kosmosie może być bliższa niż nam się wydaje!</p>
-    <a href="https://tmlead.pl/redirect/275171_1134" class="button-link">Zobacz nowoczesne technologie rolnicze</a>
-  </div>  <div class="affiliate-section" id="pasta">
-    <h2 class="section-title">🥄 Przepis na pastę z awokado</h2>
-    <ul>
-      <li>1 dojrzałe awokado</li>
-      <li>1 ząbek czosnku</li>
-      <li>sok z 1/2 cytryny</li>
-      <li>szczypta soli i pieprzu</li>
-    </ul>
-    <p>Wszystko rozgnieć widelcem i podawaj ze świeżym pieczywem lub krakersami. Pyszne i szybkie!</p>
-    <a href="https://tmlead.pl/redirect/275171_985" class="button-link">🍴 Zobacz sprzęt kuchenny, który się przyda</a>
-  </div>  <div class="affiliate-section">
-    <h2 class="section-title">💳 Dla Ciebie: Konta, karty, pożyczki</h2>
-    <p>Nie masz konta? Potrzebujesz dobrej oferty karty lub pożyczki? Sprawdź polecane propozycje:</p>
-    <a href="https://tmlead.pl/redirect/275171_2402" class="button-link">Sprawdź oferty bankowe</a>
-  </div></body>
+
+<header>
+  <h1>🌍 Ciekawnik</h1>
+  <p>Ciekawostki, eksperymenty, przepisy i coś dla Ciebie!</p>
+</header>
+
+<nav>
+  <a href="#ciekawostka">Ciekawostka</a>
+  <a href="#eksperyment">Eksperyment</a>
+  <a href="#humor">Humor</a>
+  <a href="#wideo">Wideo</a>
+  <a href="#przepis">Przepis</a>
+  <a href="#finanse">Finanse</a>
+</nav>
+
+<div class="container">
+
+  <!-- Ciekawostka -->
+  <div class="card" id="ciekawostka">
+    <img src="https://source.unsplash.com/300x200/?science,facts" alt="Ciekawostka">
+    <div class="card-content">
+      <h3>Ciekawostka ze świata</h3>
+      <p>Czy wiesz, że meduza Turritopsis dohrnii potrafi cofać swój cykl życia?</p>
+      <a class="read-more" href="#ciekawostka-full">Czytaj dalej</a>
+    </div>
+  </div>
+
+  <!-- Eksperyment -->
+  <div class="card" id="eksperyment">
+    <img src="https://source.unsplash.com/300x200/?experiment,lab" alt="Eksperyment">
+    <div class="card-content">
+      <h3>Eksperyment dnia</h3>
+      <p>Sprawdź jak zmienia się dźwięk w zależności od temperatury powietrza.</p>
+      <a class="read-more" href="#eksperyment-full">Czytaj dalej</a>
+    </div>
+  </div>
+
+  <!-- Humor -->
+  <div class="card" id="humor">
+    <img src="https://source.unsplash.com/300x200/?funny,smile" alt="Humor">
+    <div class="card-content">
+      <h3>Humor dnia</h3>
+      <p>Dlaczego komputerowi nigdy nie jest zimno? Bo ma Windowsa!</p>
+      <a class="read-more" href="#humor-full">Czytaj dalej</a>
+    </div>
+  </div>
+
+  <!-- Wideo -->
+  <div class="card" id="wideo">
+    <img src="https://source.unsplash.com/300x200/?video,media" alt="Wideo">
+    <div class="card-content">
+      <h3>Wideo dnia</h3>
+      <p>Zobacz niesamowity trik z kubkiem i grawitacją!</p>
+      <a class="read-more" href="#wideo-full">Czytaj dalej</a>
+    </div>
+  </div>
+
+  <!-- Przepis -->
+  <div class="card" id="przepis">
+    <img src="https://source.unsplash.com/300x200/?cooking,recipe" alt="Przepis">
+    <div class="card-content">
+      <h3>Przepis dnia</h3>
+      <p>Puszyste naleśniki z jogurtem i owocami w 10 minut!</p>
+      <a class="read-more" href="#przepis-full">Czytaj dalej</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Podstrony - rozwinięcia -->
+<section id="ciekawostka-full">
+  <h2>Ciekawostka: Nieśmiertelna meduza</h2>
+  <p>Meduza Turritopsis dohrnii to jedyny znany organizm, który może cofać swój cykl życia do wcześniejszego stadium. Oznacza to, że teoretycznie może żyć wiecznie, o ile nie zostanie zjedzona lub zniszczona.</p>
+  <p style="margin-top:20px;"><a href="https://tmlead.pl/redirect/275171_985">🔗 Sprawdź książki o biologii morskiej</a></p>
+</section>
+
+<section id="eksperyment-full">
+  <h2>Eksperyment: Dźwięk i temperatura</h2>
+  <p>Spróbuj nagrać dźwięk dzwonka w pomieszczeniu o różnych temperaturach – usłyszysz subtelne różnice, ponieważ ciepłe powietrze przewodzi fale dźwiękowe szybciej!</p>
+  <p style="margin-top:20px;"><a href="https://tmlead.pl/redirect/275171_1134">🔗 Zobacz zestawy do domowych eksperymentów</a></p>
+</section>
+
+<section id="humor-full">
+  <h2>Humor dnia: Komputerowe żarty</h2>
+  <p>Co mówi programista na imprezie? „Czy jest tu ktoś z JSON-em?” 😄</p>
+  <p style="margin-top:20px;"><a href="https://tmlead.pl/redirect/275171_2402">🔗 Koszulki z żartami IT</a></p>
+</section>
+
+<section id="wideo-full">
+  <h2>Wideo dnia: Trik z grawitacją</h2>
+  <p>Film pokazuje, jak dzięki odpowiedniemu rozłożeniu ciężaru kubek może balansować na krawędzi stołu. Prosty, ale zaskakujący eksperyment!</p>
+  <p><a href="https://tmlead.pl/redirect/275171_1134">🔗 Zestawy fizyczne dla dzieci i dorosłych</a></p>
+</section>
+
+<section id="przepis-full">
+  <h2>Przepis dnia: Naleśniki z owocami</h2>
+  <p>Składniki: 1 jajko, 1 szklanka mąki, 1/2 szklanki jogurtu, 1/2 szklanki mleka, szczypta soli. Wymieszaj, smaż i podawaj z owocami!</p>
+  <p><a href="https://tmlead.pl/redirect/275171_2402">🔗 Akcesoria kuchenne do naleśników</a></p>
+</section>
+
+<!-- Finanse -->
+<section id="finanse">
+  <h2>💰 Dla Ciebie: Konta, karty, pożyczki</h2>
+  <div class="finance-links">
+    <a href="https://tmlead.pl/redirect/275171_2402">🔗 Najlepsze konto oszczędnościowe</a>
+    <a href="https://tmlead.pl/redirect/275171_985">🔗 Karta kredytowa z cashbackiem</a>
+    <a href="https://tmlead.pl/redirect/275171_1134">🔗 Szybka pożyczka bez formalności</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Ciekawnik.pl – Strona pełna ciekawości i inspiracji ✨
+</footer>
+
+</body>
 </html>
